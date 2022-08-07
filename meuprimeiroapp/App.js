@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
 
 export default function App() {
   return (
@@ -11,7 +11,7 @@ export default function App() {
         <Text style={styles.subtitle}>Minha primeira experiencia com React native</Text>
       </View>
       <StatusBar style="inverted" />
-    </View>
+    </View> 
   );
 }
 
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
 
   container: {
     Color: '#fff' ,
-    flex: 1,
+    flex: 1 , 
     backgroundColor: '#2A2A2A',
     alignItems: 'center',
     justifyContent: 'center',
