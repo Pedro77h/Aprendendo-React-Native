@@ -3,11 +3,12 @@ import React from 'react';
 import {
     TextInput,
     Text ,
-  View , 
+    View , 
     Button
 } from 'react-native';
 
 import { styles } from './styles';
+import { ResultImc } from './ResultImc';
 
 export  default function Form(){
   return (
@@ -19,7 +20,7 @@ export  default function Form(){
             <TextInput placeholder='Ex. 65.400' keyboardType='numeric'></TextInput>
             <Button title='Calcular IMC'></Button>
         </View>
-        <ResultImc md/>
+        <ResultImc messageResultImc={messageImc} ResultImc={imc}/>
     </View>
   );
 }
