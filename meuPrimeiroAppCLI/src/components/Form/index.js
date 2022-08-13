@@ -9,8 +9,16 @@ import {
 
 import { styles } from './styles';
 import { ResultImc } from './ResultImc';
+import { useState } from 'react';
 
 export  default function Form(){
+
+const [height , setHeight] = useState(null)
+const [ weight , setWeight] = useState(null)
+const [ messageImc , setMessageImc] = useState(null)
+const [] = useState(null)
+const [] = useState(null)
+
   return (
     <View>
         <View>
