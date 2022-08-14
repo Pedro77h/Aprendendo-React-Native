@@ -1,17 +1,17 @@
 import React from 'react';
 
 import {
-  View , 
+  View,
   Text
 } from 'react-native';
 
 import { styles } from './styles';
 
-export function ResultImc(props){
+export function ResultImc(props) {
   return (
     <View>
-    <Text>{props.ResultImc}</Text>
-    <Text>{props.messageResultimc}</Text>
+      <Text>{props.messageResultImc}</Text>
+      <Text>{props.resultImc}</Text>
     </View>
   );
 }
