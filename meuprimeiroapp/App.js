@@ -7,7 +7,7 @@ export default function App() {
       <Text style={styles.outtitle}>Meu Primeiro App</Text>
         <View style={styles.card}>
       <Text style={styles.title}>Hello World!</Text>
-        <Text style={styles.subtitle}>Minha primeira experiencia com React native</Text>
+        <Text style={styles.subtitle}>Minha primeira experiencia com React Native</Text>
       </View>
       <StatusBar style="inverted" />
     </View> 
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     fontSize: 22 ,
     fontWeight: 'bold'
   } ,
-  subtitle:{
+  subtitles:{
     color: '#999' ,
     fontSize: 15
   }
