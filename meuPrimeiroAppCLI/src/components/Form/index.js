@@ -44,8 +44,8 @@ function validation(){
             <TextInput
             onChangeText={setHeight}
             value={height}
-             placeholder='Ex. 1.75' 
-             keyboardType='numeric'></TextInput>
+            placeholder='Ex. 1.75' 
+            keyboardType='numeric'></TextInput>
             <Text>Peso</Text>
             <TextInput
             onChangeText={setWeight}
