@@ -4,7 +4,8 @@ import {
     TextInput,
     Text ,
     View , 
-    Button
+    Button , 
+    TouchableOpacity
 } from 'react-native';
 
 import styles from './style';
@@ -42,23 +43,28 @@ function validation(){
     <View>
       <View style = {styles.formContext}>
           <View style={styles.form}>
-            <Text>Altura</Text>
+            <Text style={styles.formLabel}>Altura</Text>
             <TextInput
+            style={styles.formImput}
             onChangeText={setHeight}
             value={height}
             placeholder='Ex. 1.75' 
-            keyboardType='numeric'></TextInput>
-            <Text>Peso</Text>
+            keyboardType='numeric'
+
+            ></TextInput>
+            <Text style={styles.formLabel}>Peso</Text>
             <TextInput
+            style={styles.formImput}
             onChangeText={setWeight}
             value={weight} 
             placeholder='Ex. 65.400' 
             keyboardType='numeric'></TextInput>
-            
-            <Button 
-            title={textButton}
+            <TouchableOpacity
+            style={styles.buttonCalculator}
             onPress={() => validation()}
-            ></Button>
+            >
+              <Text  style={styles.textButtonCalculator}>{textButton}</Text>
+            </TouchableOpacity>
         </View>
         <ResultImc messageResultImc={messageImc} resultImc={imc}/>
       </View>
