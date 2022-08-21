@@ -19,7 +19,16 @@ export const styles = StyleSheet.create({
     fontSize: 48 , 
     color: "#0000FF" ,
     fontWeight: 'bold'
-  }
+  } ,
+  boxShareButton: {
+
+  } , 
+  shared:{
+
+  } , 
+  sharedText: {
+
+  } 
 });
 
 export default styles
