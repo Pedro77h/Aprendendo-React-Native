@@ -17,7 +17,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import Title from './src/components/title';
-import Main from "./src/components/Main/index"
+import Form from './src/components/Form';
+
 
 
 const App = () => {
@@ -30,7 +31,7 @@ const App = () => {
   return (
     <View style={styles.container}>
       <Title></Title>
-      <Main></Main>
+      <Form></Form>
     </View>
   );
 };

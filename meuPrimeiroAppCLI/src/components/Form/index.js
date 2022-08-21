@@ -7,9 +7,10 @@ import {
     Button
 } from 'react-native';
 
-import { styles } from './styles';
+import styles from './style';
 import { ResultImc } from './ResultImc';
 import { useState } from 'react';
+
 
 export  default function Form(){
 
@@ -39,7 +40,8 @@ function validation(){
 
   return (
     <View>
-        <View>
+      <View style = {styles.formContext}>
+          <View style={styles.form}>
             <Text>Altura</Text>
             <TextInput
             onChangeText={setHeight}
@@ -52,12 +54,14 @@ function validation(){
             value={weight} 
             placeholder='Ex. 65.400' 
             keyboardType='numeric'></TextInput>
+            
             <Button 
             title={textButton}
             onPress={() => validation()}
             ></Button>
         </View>
         <ResultImc messageResultImc={messageImc} resultImc={imc}/>
+      </View>
     </View>
   );
 }

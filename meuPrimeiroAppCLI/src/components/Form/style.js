@@ -1,8 +1,22 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
-  Form: {
-    flex: 1,
+  formContext: {
+    width:"100%",
+    height: '100%' ,
+    bottom: 0 ,
+    backgroundColor: '#fff' ,
+    alignItems: 'center' ,
+    borderTopLeftRadius: 30 ,
+    borderTopRightRadius: 30 ,
+    marginTop:30 ,
+  } ,
+  form:{
+    width: "100%" ,
+    height: 'auto' , 
+    marginTop: 30 , 
+    padding: 10 ,
+
   }
 });
 
