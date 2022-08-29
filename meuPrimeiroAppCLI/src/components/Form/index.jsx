@@ -5,7 +5,10 @@ import {
     Text ,
     View , 
     Button , 
-    TouchableOpacity
+    TouchableOpacity , 
+    Vibration , 
+    Pressable , 
+    Keyboard
 } from 'react-native';
 
 import styles from './style';
@@ -20,10 +23,21 @@ const [weight , setWeight] = useState(null)
 const [ messageImc , setMessageImc] = useState('Preencha o peso e altura')
 const [imc , setImc] = useState(null)
 const [textButton , setTextButton] = useState("Calcular")
+const [errorMessage , setErrorMessage] = useState(null)
 
 function imcCalculator() {
-    return setImc((weight/(height*height)).toFixed(2))
+  let heightFormat = height.replace("," , ".")
+    return setImc((weight/(heightFormat*heightFormat)).toFixed(2))
 }
+
+
+function verification() {
+  if(imc == null){
+    setErrorMessage('Campo Obrigatorio')
+   Vibration.vibrate(500);
+  }  
+}
+
 
 function validation(){
   if(weight != null && height != null){
@@ -32,18 +46,21 @@ function validation(){
     setWeight(null)
     setMessageImc("Seu imc é igual:")
     setTextButton("Calcular Novamente")
+    setErrorMessage(null)
     return 
   }
+  verification()
   setImc(null)
   setTextButton("Calcular")
   setMessageImc("Preencha o peso e altura")
 }
 
   return (
-    <View>
+    <Pressable onPress={Keyboard.dismiss}>
       <View style = {styles.formContext}>
           <View style={styles.form}>
             <Text style={styles.formLabel}>Altura</Text>
+            <Text style={styles.errorMessage}>{errorMessage}</Text>
             <TextInput
             style={styles.formImput}
             onChangeText={setHeight}
@@ -53,6 +70,7 @@ function validation(){
 
             ></TextInput>
             <Text style={styles.formLabel}>Peso</Text>
+            <Text style={styles.errorMessage}>{errorMessage}</Text>
             <TextInput
             style={styles.formImput}
             onChangeText={setWeight}
@@ -61,13 +79,13 @@ function validation(){
             keyboardType='numeric'></TextInput>
             <TouchableOpacity
             style={styles.buttonCalculator}
-            onPress={() => validation()}
+            onPress={() => validation() }
             >
               <Text  style={styles.textButtonCalculator}>{textButton}</Text>
             </TouchableOpacity>
         </View>
         <ResultImc messageResultImc={messageImc} resultImc={imc}/>
       </View>
-    </View>
+    </Pressable>
   );
 }

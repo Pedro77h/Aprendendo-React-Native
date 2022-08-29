@@ -4,12 +4,13 @@ export const styles = StyleSheet.create({
   formContext: {
     width:"100%",
     height: '100%' ,
+    justifyContent: 'space-around' ,
     bottom: 0 ,
     backgroundColor: '#fff' ,
     alignItems: 'center' ,
     borderTopLeftRadius: 30 ,
     borderTopRightRadius: 30 ,
-    marginTop:30 ,
+    paddingTop: 15
   } ,
   form:{
     width: "100%" ,
@@ -44,6 +45,12 @@ export const styles = StyleSheet.create({
     paddingTop: 14 , 
     marginLeft: 12 , 
     marginTop: 30 , 
+  } ,
+  errorMessage:{
+  fontSize:12 , 
+  color: "#0000FF" , 
+  fontWeight: 'bold' ,
+  paddingLeft: 20
   }
 });
 
