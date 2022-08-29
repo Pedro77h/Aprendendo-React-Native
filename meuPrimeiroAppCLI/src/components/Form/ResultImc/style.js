@@ -4,7 +4,7 @@ export const styles = StyleSheet.create({
   resultImc: {
     flex: 1,
     marginTop: 15 ,
-    paddingTop: 60 , 
+    paddingTop: 30 , 
     borderRadius: 50 , 
     fontSize: 48 ,
     alignItems: 'center' ,
@@ -21,12 +21,20 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold'
   } ,
   boxShareButton: {
-
+    width: '100%', 
+    alignItems: "center" , 
+    marginBottom: 10 , 
   } , 
   shared:{
-
+    backgroundColor: '#B0E0E6' , 
+    borderRadius: 50 , 
+    paddingBottom: 5 , 
+    paddingTop: 5
   } , 
   sharedText: {
+    color: '#fff' ,
+    fontWeight: 'bold' ,
+    paddingHorizontal: 30 , 
 
   } 
 });

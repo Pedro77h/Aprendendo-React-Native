@@ -22,7 +22,7 @@ export function ResultImc(props) {
       <View style={styles.boxShareButton}>
         {props.resultImc !=null ?
         <TouchableOpacity onPress={()=> onShare()} style={styles.shared}>
-          <Text style={styles.sharedtext}>Compartilhar</Text>
+          <Text style={styles.sharedText}>Compartilhar</Text>
         </TouchableOpacity>
         : 
         <View/>
