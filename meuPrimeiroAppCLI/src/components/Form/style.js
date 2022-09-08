@@ -4,7 +4,6 @@ export const styles = StyleSheet.create({
   formContext: {
     width:"100%",
     height: '100%' ,
-    justifyContent: 'space-around' ,
     bottom: 0 ,
     backgroundColor: '#fff' ,
     alignItems: 'center' ,
@@ -51,6 +50,10 @@ export const styles = StyleSheet.create({
   color: "#0000FF" , 
   fontWeight: 'bold' ,
   paddingLeft: 20
+  } , 
+  ehxibitionResultImc:{
+      width: '100%' , 
+      height: "50%"
   }
 });
 

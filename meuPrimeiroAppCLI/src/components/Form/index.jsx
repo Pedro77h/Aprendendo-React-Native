@@ -34,7 +34,7 @@ export default function Form() {
   function verification() {
     if (imc == null) {
       setErrorMessage('Campo Obrigatorio')
-      Vibration.vibrate(500);
+       Vibration.vibrate(500) ;
     }
   }
 
@@ -48,13 +48,16 @@ export default function Form() {
       setTextButton("Calcular Novamente")
       setErrorMessage(null)
     }
+    else {
     verification()
     setImc(null)
     setTextButton("Calcular")
     setMessageImc("Preencha o peso e altura")
+    }
   }
 
   return (
+    <View>
     <View style={styles.formContext}>
       {imc == null ?
         <Pressable onPress={Keyboard.dismiss} style={styles.form}>
@@ -78,7 +81,7 @@ export default function Form() {
             keyboardType='numeric'></TextInput>
           <TouchableOpacity
             style={styles.buttonCalculator}
-            onPress={() => validation()}
+            onPress={() => {validation()}}
           >
             <Text style={styles.textButtonCalculator}>{textButton}</Text>
           </TouchableOpacity>
@@ -88,13 +91,13 @@ export default function Form() {
           <ResultImc messageResultImc={messageImc} resultImc={imc} />
           <TouchableOpacity
             style={styles.buttonCalculator}
-            onPress={() => validation()}
+            onPress={() => {validation()}}
           >
             <Text style={styles.textButtonCalculator}>{textButton}</Text>
           </TouchableOpacity>
         </View>
       }
     </View>
-
+    </View>
   );
 }
