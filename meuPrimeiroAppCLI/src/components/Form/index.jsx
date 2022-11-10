@@ -8,7 +8,8 @@ import {
   TouchableOpacity,
   Vibration,
   Pressable,
-  Keyboard
+  Keyboard , 
+  FlatList
 } from 'react-native';
 
 import styles from './style';
@@ -24,10 +25,14 @@ export default function Form() {
   const [imc, setImc] = useState(null)
   const [textButton, setTextButton] = useState("Calcular")
   const [errorMessage, setErrorMessage] = useState(null)
+  const [imcList , setImcList] = useState([])
+
 
   function imcCalculator() {
     let heightFormat = height.replace(",", ".")
-    return setImc((weight / (heightFormat * heightFormat)).toFixed(2))
+    let totalImc = ((weight / (heightFormat * heightFormat)).toFixed(2))
+    setImcList(arr => [...arr ,{id: new Date().getTime() , imc:totalImc}])
+    setImc(totalImc)
   }
 
 
